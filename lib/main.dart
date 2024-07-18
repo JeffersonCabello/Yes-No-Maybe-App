@@ -11,14 +11,14 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Yes No App',
       debugShowCheckedModeBanner: false,
-      theme: AppTheme(selectedColor: 6).theme(),
+      theme: AppTheme().theme(),
       home: Scaffold(
         appBar: AppBar(
           title: const Text('Yes No App'),
         ),
         body: Center(
-            child: FilledButton.tonal(
-                onPressed: () {}, child: const Text("Click me"))),
+          child: FilledButton(onPressed: () {}, child: const Text("Pulsame")),
+        ),
       ),
     );
   }
