@@ -21,10 +21,29 @@ class HerMessageBubble extends StatelessWidget {
               )),
         ),
         const SizedBox(
+          height: 10,
+        ),
+        _ImageBuble(),
+        const SizedBox(
           height: 5,
-        )
-        //TODO: Imagen
+        ),
       ],
+    );
+  }
+}
+
+class _ImageBuble extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size;
+    return ClipRRect(
+      borderRadius: BorderRadius.circular(20),
+      child: Image.network(
+        'https://yesno.wtf/assets/yes/4-c53643ecec77153eefb461e053fb4947.gif',
+        width: size.width * 0.7,
+        height: 150,
+        fit: BoxFit.cover,
+      ),
     );
   }
 }
