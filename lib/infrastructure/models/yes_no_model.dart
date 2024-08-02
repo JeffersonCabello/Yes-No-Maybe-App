@@ -7,4 +7,5 @@ class YesNoModel {
 
   factory YesNoModel.fromJsonMap(Map<String, dynamic> json) => YesNoModel(
       answer: json["answer"], forced: json["forced"], image: json["image"]);
+      
 }
