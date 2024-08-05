@@ -15,7 +15,7 @@ class ChatProvider extends ChangeNotifier {
     final newMessage = Message(text: text, fromWho: FromWho.mine);
     if (newMessage.text.isNotEmpty) {
       messageList.add(newMessage);
-      if (newMessage.text.endsWith("?")) {
+      if (newMessage.text.trim().endsWith("?")) {
         await herReply();
       }
       notifyListeners();
